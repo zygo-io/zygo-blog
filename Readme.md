@@ -7,8 +7,8 @@ A very simple app to illustrate [zygo](http://www.github.com/Bubblyworld/zygo)  
 Clone both the [zygo](http://www.github.com/Bubblyworld/zygo) and [zygo-example](http://www.github.com/Bubblyworld/zygo-example) repos:
 
 ``` sh
-$ git clone git@http://www.github.com:Bubblyworld/zygo.git
-$ git clone git@http://www.github.com:Bubblyworld/zygo-example.git
+$ git clone git@github.com:Bubblyworld/zygo.git
+$ git clone git@github.com:Bubblyworld/zygo-example.git
 ```
 
 Head into [zygo-example](http://www.github.com/Bubblyworld/zygo-example) and symlink [zygo](http://www.github.com/Bubblyworld/zygo) into the public directory:

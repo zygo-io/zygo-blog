@@ -69,7 +69,7 @@ This script loads the [zygo](github.com/Bubblyworld/zygo) client, and proceeds t
 
 Note that the handler files are specified with their [JSPM](github.com/jspm/jspm-cli) module paths.
 
-# The Handlers
+## The Handlers
 ``` javascript
 export default function(state) {
   return Promise.resolve().then(function() {
@@ -82,7 +82,7 @@ export default function(state) {
 ```
 The handlers are very simple - they just return a promise that resolves to their respective component and page title. Note the use of `jsx!` in the [JSPM](github.com/jspm/jspm-cli) path, telling the [System.js](githubb.com/systemjs/systemjs) loader to use the jsx plugin to load the component.
 
-# The Components
+## The Components
 ``` javascript
 import React from 'react';
 import Page from './page.jsx!';

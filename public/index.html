@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <div id="__zygo-body-container__"/>
+  </body>
+
+  <script>
+    System.import('zygo/lib/zygo-client').then(function(zygo) {
+      zygo._setInitialState({
+        route: {}
+      });
+
+      zygo._setRoutes({
+        '/one': 'lib/one-handler',
+        '/two': 'lib/two-handler'
+      });
+
+      zygo.route('/one');
+    });
+  </script>
+</html>

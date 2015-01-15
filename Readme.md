@@ -4,23 +4,16 @@ A very simple app to illustrate [zygo](http://www.github.com/Bubblyworld/zygo)  
 
 ## Installation
 
-Clone both the [zygo](http://www.github.com/Bubblyworld/zygo) and [zygo-example](http://www.github.com/Bubblyworld/zygo-example) repos:
+Clone the [zygo-example](http://www.github.com/Bubblyworld/zygo-example) repo:
 
 ``` sh
-$ git clone git@github.com:Bubblyworld/zygo.git
 $ git clone git@github.com:Bubblyworld/zygo-example.git
-```
-
-Head into [zygo-example](http://www.github.com/Bubblyworld/zygo-example) and symlink [zygo](http://www.github.com/Bubblyworld/zygo) into the public directory:
-``` sh
-$ cd zygo-example/public
-$ ln -s ../../zygo
 ```
 
 Install the dependencies, and serve the public folder with a server of your choice:
 ``` sh
 $ jspm install
-$ http_server
+$ http_server public
 ```
 
 If you don't already have [JSPM](http://www.github.com/jspm/jspm-cli) installed, you can get it with:
@@ -51,7 +44,7 @@ This is the container div that [zygo](http://www.github.com/Bubblyworld/zygo) re
 
 ``` html
 <script>
-System.import('zygo/lib/zygo-client').then(function(zygo) {
+System.import('zygo').then(function(zygo) {
   zygo._setInitialState({
     route: {}
   });

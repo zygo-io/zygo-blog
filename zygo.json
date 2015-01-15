@@ -1,5 +1,3 @@
 {
- "routes": "public/routes/routes.json",
- "clientRoutes": "public/routes/clientRoutes.json",
- "serverRoutes": "public/routes/serverRoutes.json"
+ "routes": "public/routes/routes.json"
 }

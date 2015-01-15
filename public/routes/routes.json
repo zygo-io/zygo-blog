@@ -1,0 +1,4 @@
+{
+ "/one": "lib/one-handler",
+ "/two": "lib/two-handler"
+}

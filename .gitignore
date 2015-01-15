@@ -1,3 +1,4 @@
 public/jspm_packages
 public/zygo
+node_modules
 .jshintrc

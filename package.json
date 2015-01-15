@@ -11,5 +11,8 @@
       "url-pattern": "npm:url-pattern@^0.6.0",
       "zygo": "github:Bubblyworld/zygo@master"
     }
+  },
+  "dependencies": {
+    "zygo-server": "^0.1"
   }
 }

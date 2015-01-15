@@ -2,7 +2,7 @@ import React from 'react';
 import Page from './page.jsx!';
 import 'lib/one.css!';
 
-import * as zygo from 'zygo/lib/zygo-client';
+import * as zygo from 'zygo';
 
 export default React.createClass({
   render: function() {

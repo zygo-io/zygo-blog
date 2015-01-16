@@ -1,4 +1,5 @@
 {
- "/one": "lib/one-handler",
- "/two": "lib/two-handler"
+  "/": "handlers/home",
+  "/about": "handlers/about",
+  "/post/:id": "handlers/post"
 }

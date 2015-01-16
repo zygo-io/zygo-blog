@@ -9,10 +9,11 @@ System.config({
 
 System.config({
   "map": {
+    "bootstrap": "npm:bootstrap@3.3.1",
     "css": "github:systemjs/plugin-css@0.1.0",
     "jsx": "github:floatdrop/plugin-jsx@0.1.1",
     "react": "npm:react@0.12.2",
-    "url-pattern": "npm:url-pattern@0.6.0",
+    "react-bootstrap": "npm:react-bootstrap@0.13.2",
     "zygo": "github:Bubblyworld/zygo@master",
     "github:Bubblyworld/zygo@master": {
       "chai": "npm:chai@1.10.0",
@@ -101,6 +102,12 @@ System.config({
     "npm:ast-types@0.6.7": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:bootstrap@3.3.1": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.0"
     },
     "npm:browserify-aes@0.8.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -340,6 +347,9 @@ System.config({
     },
     "npm:q@1.1.2": {
       "process": "github:jspm/nodelibs-process@0.1.0"
+    },
+    "npm:react-bootstrap@0.13.2": {
+      "react": "npm:react@0.12.2"
     },
     "npm:react-tools@0.12.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",

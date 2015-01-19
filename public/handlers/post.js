@@ -1,6 +1,7 @@
-export default function(state, route) {
+export function handler(state, route) {
   return Promise.resolve({
-    component: 'app/post.jsx!',
     title: 'Post #' + route.options.id
   });
 }
+
+export var component = 'app/post.jsx!';

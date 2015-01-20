@@ -1,4 +1,6 @@
 public/jspm_packages
 public/zygo
+public/config.js
+build
 node_modules
 .jshintrc

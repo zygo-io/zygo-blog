@@ -1,5 +1,8 @@
 {
- "routes": "public/routes/routes.json",
- "port": "8080",
- "buildDir": "build"
+  "routes": "public/routes/routes.json",
+  "port": "8080",
+  "buildDir": "public/build",
+  "environment": "production",
+  "packageJSON": "package.json",
+  "bundlesJSON": "public/build/bundles.json"
 }

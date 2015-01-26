@@ -1,5 +1,0 @@
-{
-  "/": "handlers/home",
-  "/about": "handlers/about",
-  "/post/:id": "handlers/post"
-}

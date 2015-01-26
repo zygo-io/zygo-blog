@@ -36,7 +36,7 @@ System.config({
       "constants-browserify": "npm:constants-browserify@0.0.1"
     },
     "github:jspm/nodelibs-crypto@0.1.0": {
-      "crypto-browserify": "npm:crypto-browserify@3.9.7"
+      "crypto-browserify": "npm:crypto-browserify@3.9.9"
     },
     "github:jspm/nodelibs-events@0.1.0": {
       "events-browserify": "npm:events-browserify@0.0.1"
@@ -99,6 +99,10 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
+    "npm:ast-types@0.6.10": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
     "npm:ast-types@0.6.9": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
@@ -109,8 +113,9 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.0"
     },
-    "npm:browserify-aes@0.8.1": {
+    "npm:browserify-aes@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "create-hash": "npm:create-hash@1.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.0",
       "inherits": "npm:inherits@2.0.1",
@@ -199,8 +204,8 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "stream": "github:jspm/nodelibs-stream@0.1.0"
     },
-    "npm:crypto-browserify@3.9.7": {
-      "browserify-aes": "npm:browserify-aes@0.8.1",
+    "npm:crypto-browserify@3.9.9": {
+      "browserify-aes": "npm:browserify-aes@1.0.0",
       "browserify-sign": "npm:browserify-sign@2.8.0",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-ecdh": "npm:create-ecdh@1.0.3",
@@ -210,7 +215,8 @@ System.config({
       "diffie-hellman": "npm:diffie-hellman@2.2.3",
       "inherits": "npm:inherits@2.0.1",
       "pbkdf2-compat": "npm:pbkdf2-compat@2.0.1",
-      "public-encrypt": "npm:public-encrypt@1.1.2"
+      "public-encrypt": "npm:public-encrypt@1.1.2",
+      "randombytes": "npm:randombytes@2.0.1"
     },
     "npm:deep-eql@0.1.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -363,6 +369,11 @@ System.config({
     "npm:q@1.1.2": {
       "process": "github:jspm/nodelibs-process@0.1.0"
     },
+    "npm:randombytes@2.0.1": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "crypto": "github:jspm/nodelibs-crypto@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.0"
+    },
     "npm:react-bootstrap@0.13.2": {
       "react": "npm:react@0.12.2"
     },
@@ -390,7 +401,7 @@ System.config({
     },
     "npm:recast@0.9.15": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
-      "ast-types": "npm:ast-types@0.6.9",
+      "ast-types": "npm:ast-types@0.6.10",
       "esprima-fb": "npm:esprima-fb@10001.1.0-dev-harmony-fb",
       "fs": "github:jspm/nodelibs-fs@0.1.0",
       "private": "npm:private@0.1.6",

@@ -1,0 +1,7 @@
+{
+  "component": "app/page.jsx!",
+
+  "/about": {
+    "component": "app/about.jsx!"
+  }
+}

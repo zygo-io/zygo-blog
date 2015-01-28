@@ -1,7 +1,7 @@
 {
   "component": "app/page.jsx!",
 
-  "/about": {
-    "component": "app/about.jsx!"
+  "/post/:id": {
+    "component": "app/article.jsx!"
   }
 }

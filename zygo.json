@@ -1,4 +1,8 @@
 {
   "post": 8080,
-  "routes": "public/routes.json"
+  "anchors": true,
+  "routes": "public/routes.json",
+  "env": "development",
+  "buildDir": "public/bundles",
+  "bundlesJSON": "public/bundles/bundles.json"
 }

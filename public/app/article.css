@@ -2,6 +2,8 @@
 div.article-container {
   margin: 0;
   padding: 0 15%;
+  background-color: white;
+  overflow: hidden;
 }
 
 /* article itself */

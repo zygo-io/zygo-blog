@@ -7,6 +7,7 @@ div.article-header-container {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid lightgray;
+  color: white;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
@@ -33,8 +34,8 @@ div.article-header h3 {
 /* post image */
 div.article-header img {
   display: block;
-  width: 20%;
-  height: 20%;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
 }
 

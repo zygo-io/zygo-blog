@@ -2,8 +2,9 @@
 div.read-next-container {
   margin: 0;
   padding: 0 15%;
+  overflow: hidden;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #F2F2F2;
   border-top: 1px solid lightgray;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }

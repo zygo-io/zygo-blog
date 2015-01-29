@@ -1,0 +1,10 @@
+/* get rid of margins on the side of the page */
+body {
+  margin: 0 !important;
+}
+
+/* fixed background image */
+div.page img.banner {
+  position: fixed;
+  z-index: -1;
+}

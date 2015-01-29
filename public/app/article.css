@@ -1,0 +1,23 @@
+/* container */
+div.article-container {
+  margin: 0;
+  padding: 0 15%;
+}
+
+/* article itself */
+div.article {
+  padding: 0 10%;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+/* paragraph elements */
+div.article p {
+  font-size: 14px;
+  line-height: 20px;
+  text-indent: 50px;
+  padding: 0 0 10px;
+}
+
+div.article p::first-letter {
+  font-size: 115%;
+}

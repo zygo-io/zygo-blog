@@ -1,8 +1,10 @@
 {
   "post": 8080,
+  "middleware": "./database",
+
   "anchors": true,
-  "routes": "public/routes.json",
   "env": "development",
+  "routes": "public/routes.json",
   "buildDir": "public/bundles",
   "bundlesJSON": "public/bundles/bundles.json"
 }

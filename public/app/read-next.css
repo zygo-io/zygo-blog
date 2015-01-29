@@ -6,7 +6,7 @@ div.read-next-container {
 
   background-color: #F2F2F2;
   border-top: 1px solid lightgray;
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-family: Raleway;
 }
 
 /* read-next component */
@@ -41,6 +41,7 @@ div.read-next-container h3::first-letter {
 /* Post thumbnail */
 div.read-next-container p {
   margin: 5px 10px;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 /* More button */

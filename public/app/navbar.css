@@ -1,0 +1,63 @@
+div.navbar-container {
+  position: fixed;
+  overflow: hidden;
+  height: 30px;
+  width: 100vw;
+  background-color: #F2F2F2;
+  border-bottom: 1px solid lightgray;
+
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+}
+
+div.navbar {
+  display: flex;
+  align-items: center;
+
+  font-family: Raleway, serif;
+}
+
+/* fading images */
+div.navbar div.fade {
+  width: 25px;
+  height: 25px;
+  padding: 0 10%;
+}
+
+div.navbar div.fade img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+
+  transition: opacity 2s;
+}
+
+div.navbar div.fade img:hover {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* category links */
+div.navbar a {
+  line-height: 30px;
+  padding: 0 1.5% 0 1.5%;
+
+  text-decoration: inherit;
+  font-style: inherit;
+  color: inherit;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* hovers */
+div.navbar a:hover {
+  color: #DD3300;
+  background-color: #E8E8E8;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* line breaks between categories */
+div.navbar a + a {
+  border-left: 1px solid lightgray;
+}

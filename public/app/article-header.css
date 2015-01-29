@@ -2,13 +2,13 @@
 div.article-header-container {
   position: relative;
   margin: 0;
-  padding: 0 10%;
+  padding: 0;
 
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid lightgray;
   color: white;
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-family: Raleway;
 }
 
 /* article header */
@@ -21,6 +21,7 @@ div.article-header h2,
 div.article-header h3 {
   text-align: center;
   text-transform: uppercase;
+  font-size: 3vw;
 }
 
 div.article-header h2 {
@@ -34,8 +35,8 @@ div.article-header h3 {
 /* post image */
 div.article-header img {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 40vh;
+  height: 40vh;
   margin: 0 auto;
 }
 

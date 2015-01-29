@@ -1,0 +1,18 @@
+div.article-listing {
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+
+div.article-listing + div.article-listing {
+  border-top: 1px solid lightgray;
+  padding: 10px 0;
+}
+
+div.article-listing div#author-wrapper {
+  flex: 1;
+}
+
+div.article-listing div#post-wrapper {
+  flex: 2;
+}

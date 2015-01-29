@@ -13,6 +13,7 @@ div.post-thumbnail h3 {
   font-family: Raleway, serif;
   text-transform: uppercase;
 }
+
 div.post-thumbnail h3::first-letter {
   font-size: 120%;
 }
@@ -20,6 +21,7 @@ div.post-thumbnail h3::first-letter {
 /* Post thumbnail */
 div.post-thumbnail p {
   margin: 5px 10px;
+  font-size: 14px;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 

@@ -1,0 +1,37 @@
+/* Remove anchor styling defaults */
+div.post-thumbnail a {
+  text-decoration: inherit;
+  font-style: inherit;
+  color: inherit;
+}
+
+/* Title */
+div.post-thumbnail h3 {
+  margin: 5px 10px;
+  transition: color 0.5s;
+
+  font-family: Raleway, serif;
+  text-transform: uppercase;
+}
+div.post-thumbnail h3::first-letter {
+  font-size: 120%;
+}
+
+/* Post thumbnail */
+div.post-thumbnail p {
+  margin: 5px 10px;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+/* More button */
+span.read-next-button {
+  font-weight: bold;
+  transition: color 0.5s;
+}
+
+/* Title and button go red on hover. */
+div.post-thumbnail a:hover h3,
+div.post-thumbnail a:hover span.read-next-button {
+  color: #DD3300;
+  transition: color 0.5s;
+}

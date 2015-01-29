@@ -6,53 +6,16 @@ div.read-next-container {
 
   background-color: #F2F2F2;
   border-top: 1px solid lightgray;
-  font-family: Raleway;
 }
 
 /* read-next component */
 div.read-next {
   font-size: 14px;
-}
-
-/* Remove anchor styling defaults */
-div.read-next-container a {
-  text-decoration: inherit;
-  font-style: inherit;
-  color: inherit;
+  font-family: Raleway;
 }
 
 /* Read Next */
 div.read-next-container h5 {
   margin: 10px 20px 10px;
   color: gray;
-}
-
-/* Title */
-div.read-next-container h3 {
-  margin: 5px 10px;
-  transition: color 0.5s;
-
-  text-transform: uppercase;
-}
-div.read-next-container h3::first-letter {
-  font-size: 120%;
-}
-
-/* Post thumbnail */
-div.read-next-container p {
-  margin: 5px 10px;
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
-
-/* More button */
-span.read-next-button {
-  font-weight: bold;
-  transition: color 0.5s;
-}
-
-/* Title and button go red on hover. */
-div.read-next-container a:hover h3,
-div.read-next-container a:hover span.read-next-button {
-  color: #DD3300;
-  transition: color 0.5s;
 }

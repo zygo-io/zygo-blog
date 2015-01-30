@@ -3,5 +3,9 @@
 
   "/post/:id": {
     "component": "app/article.jsx!"
+  },
+
+  "/category/:id": {
+    "component": "app/article-list.jsx!"
   }
 }

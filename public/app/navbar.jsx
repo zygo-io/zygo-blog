@@ -7,8 +7,8 @@ export default React.createClass({
       <div className="navbar-container">
         <div className="navbar">
           <div className="fade">
-            <img src="assets/logo-red.svg" />
-            <img src="assets/logo-black.svg" />
+            <img src="/assets/logo-red.svg" />
+            <img src="/assets/logo-black.svg" />
           </div>
 
           <a href='/'> Latest </a>

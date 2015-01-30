@@ -1,7 +1,6 @@
 {
   "post": 8080,
   "middleware": "./database",
-
   "anchors": true,
   "env": "development",
   "routes": "public/routes.json",

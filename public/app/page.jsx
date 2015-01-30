@@ -2,26 +2,19 @@ import "./page.css!";
 import React from 'react';
 
 import Navbar from './navbar.jsx!';
-import ReadNext from './read-next.jsx!';
-import Article from './article.jsx!';
-import ArticleHeader from './article-header.jsx!';
-
-import ArticleListing from './article-listing.jsx!';
+import ArticleList from './article-list.jsx!';
 
 export default React.createClass({
   render: function() {
+    if (!this.props.children)
+      this.props.children = <ArticleList />;
+
     return (
       <div className="page">
         <Navbar />
-        <img className="banner" src="assets/forest.jpg" />
-        <ArticleHeader />
+        <img className="banner" src="/assets/forest.jpg" />
 
-        <ArticleListing />
-        <ArticleListing />
-        <ArticleListing />
-
-        <Article />
-        <ReadNext />
+        {this.props.children}
       </div>
     );
   }

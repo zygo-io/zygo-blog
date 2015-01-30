@@ -8,59 +8,90 @@ var fs = require('fs');
 A list of post objects, ordered by date - latest first.
 Post object follows:
 {
+  author: String
+  author_image: String URL
   date: Date
+  category: String
   title: String
-  body: String
-  thumb: String
-  categories: [String]
+  subtitle: String
+  post: String MD
+  id: String
 }
 */
 var db = [];
 
 //Middleware function to host this as a rest api
-var postRegex = /\/db\/posts\//;
-module.exports.middleware = function(req, res, next) {
-  var match = req.url.match(/\/db\/get\/([\d]+])/);
+var postsRegex = /\/db\/posts\/?/;
+var postRegex = /\/db\/post\/(.*)/;
+var thumbsRegex = /\/db\/thumbs\/?/;
+var thumbRegex = /\/db\/thumb\/(.*)/;
+function middleware(req, res, next) {
+  if (req.url.match(postsRegex)) return respondWith(getPosts());
+  if (req.url.match(thumbsRegex)) return respondWith(getThumbs());
+  if (req.url.match(postRegex) || req.url.match(thumbRegex)) {
+    var match = req.url.match(postRegex) || req.url.match(thumbRegex);
+    var id = match[1];
+
+    return respondWith(
+      (req.url.match(postRegex) ? getPosts() : getThumbs())
+        .filter(function(obj) {
+          return obj.id === id;
+        })
+    );
+  }
 
   //no matches, call next middleware.
   next();
-};
 
-//Initialize database
-module.exports.initialize = function(callback) {
+  //returns given values
+  function respondWith(val) {
+    res.write(JSON.stringify(val));
+    res.end();
+  }
+}
+
+//Repopulate database
+function populate(callback) {
   fs.readdir('public/posts', function(error, files) {
-    if (error) callback(error);
+    if (error) return callback(error);
 
+    tmpdb = [];
     files.map(function(file) {
-      var buffer = fs.readFileSync(path.resolve('public/posts', file));
-      var post = parsePost(file, buffer);
-      addPost(post);
+      var buffer = fs.readFileSync(path.resolve('public/posts', file), 'utf-8');
+      var post = parsePost(buffer);
+      addPost(post, tmpdb);
     });
 
+    db = tmpdb;
     callback();
   });
-};
+}
+
+//Populate db every so often.
+populate(function() {});
+setInterval(function() {
+  populate(function(error) {
+    if (error) return console.log("Error populating database.");
+    console.log("Database repopulated.");
+  });
+}, 10000);
 
 //Parse post from given buffer.
-function parsePost(filename, buffer) {
-  //Get params from first three lines of file
-  buffer = buffer.split('\n');
-  var title = buffer.splice(0, 1);
-  var thumb = buffer.splice(0, 1);
-  var categories = buffer.splice(0, 1).split(' ');
-  buffer = marked(buffer.join('\n'));
+function parsePost(buffer) {
+  //The metadata is contained in the first two # # tags.
+  var meta = buffer.match(/#[\s\S]*?#/)[0];
+  buffer = buffer.substr(meta.length);
+  meta = meta.substr(1, meta.length-2);
+  meta = JSON.parse(meta);
 
-  return {
-    date: newDate(filename),
-    title: title,
-    thumb: thumb,
-    body: buffer,
-    categories: categories
-  };
+  meta.date = new Date(meta.date);
+  meta.post = marked(buffer);
+  meta.thumb = meta.post.substr(0, 100); //TODO
+  return meta;
 }
 
 //Add given post to db
-function addPost(post) {
+function addPost(post, db) {
   db.push(post);
   db.sort(function(a, b) {
     return a.date < b.date;
@@ -68,28 +99,29 @@ function addPost(post) {
 }
 
 //Get latest n or all of the posts.
-module.exports.getPosts = function(n) {
-  n = n || db.size();
+function getPosts(n) {
+  n = n || db.length;
   return db.slice(0, n);
-};
-
+}
 //Get the list of thumbs
-module.exports.getThumbs = function(n) {
+
+function getThumbs(n) {
   return getPosts(n)
-    .map(function(post) {
-      return post.thumbs;
-    });
-};
+    .map(toThumb);
+}
 
-//Get the list of categories
-module.exports.getCategories = function(n) {
-  var categories = getPosts(n)
-    .reduce(function(result, post) {
-      return result.concat(post.categories);
-    });
+function toThumb(post) {
+  return {
+    id: post.id,
+    thumb: post.thumb,
+    title: post.title,
+    author: post.author,
+    author_img: post.author_img,
+    date: post.date.toDateString(),
+    category: post.category
+  };
+}
 
-  return categories
-    .filter(function(x, i) {
-      return i === categories.indexOf(x);
-    });
-};
+module.exports = {
+  middleware: middleware
+}

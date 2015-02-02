@@ -7,7 +7,7 @@ import ArticleList from './article-list.jsx!';
 export default React.createClass({
   render: function() {
     if (!this.props.children)
-      this.props.children = <ArticleList />;
+      this.props.children = <ArticleList thumbs={this.props.thumbs} />;
 
     return (
       <div className="page">

@@ -6,9 +6,9 @@ export default React.createClass({
     return (
       <div className="article-header-container">
         <div className="article-header">
-          <h2> Lorem Ipsum </h2>
-          <img src="/assets/sample-portrait.png" />
-          <h3> Sit dolor amet, hic hac hoc blah </h3>
+          <h2> {this.props.title} </h2>
+          <img src={this.props.author_img} />
+          <h3> {this.props.subtitle} </h3>
         </div>
       </div>
     );

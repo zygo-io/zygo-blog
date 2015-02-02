@@ -123,5 +123,7 @@ function toThumb(post) {
 }
 
 module.exports = {
-  middleware: middleware
+  middleware: middleware,
+  getThumbs: getThumbs,
+  getPosts: getPosts
 }

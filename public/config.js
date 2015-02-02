@@ -4,13 +4,15 @@ System.config({
     "zygo-example/*": "lib/*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
-  }
+  },
+  "parser": "6to5"
 });
 
 System.config({
   "map": {
     "bootstrap": "npm:bootstrap@3.3.2",
     "css": "github:systemjs/plugin-css@0.1.0",
+    "http": "github:jspm/nodelibs-http@1.7.0",
     "jsx": "github:floatdrop/plugin-jsx@0.1.1",
     "react": "npm:react@0.12.2",
     "react-bootstrap": "npm:react-bootstrap@0.13.2",

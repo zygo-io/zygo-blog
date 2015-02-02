@@ -1,7 +1,7 @@
 var http = require('http');
 
 module.exports.handler = function(context) {
-  var id = context.currentRequest.options.id;
+  var id = context.loadingRequest.options.id;
 
   //load the post corresponding to the id
   return new Promise(function(resolve, reject) {
@@ -20,6 +20,7 @@ module.exports.handler = function(context) {
       });
 
       res.on('end', function() {
+        //TODO this is passed an array. This doesn't make a whole lot of sense. Fix this.
         context.posts[id] = JSON.parse(json);
         resolve();
       });

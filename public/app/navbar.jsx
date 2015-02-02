@@ -3,7 +3,7 @@ import React from "react";
 
 export default React.createClass({
   render: function() {
-    var links = ['latest', 'ember', 'react'];
+    var links = ['ember', 'react'];
     var anchors = links.map((link) => {
       var href = '/category/' + link;
       if (link === this.props.selected)
@@ -14,10 +14,12 @@ export default React.createClass({
     return (
       <div className="navbar-container">
         <div className="navbar">
-          <div className="logo">
-            <img src="/assets/logo-black.svg" />
-            <div id="overlay" />
-          </div>
+          <a href="/">
+            <div className="logo">
+              <img src="/assets/logo-black.svg" />
+              <div id="overlay" />
+            </div>
+          </a>
 
           {anchors}
         </div>

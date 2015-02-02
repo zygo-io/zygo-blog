@@ -6,7 +6,7 @@ import ReadNext from './read-next.jsx!';
 
 export default React.createClass({
   render: function() {
-    var post = this.props.posts[this.props.currentRequest.options.id][0];
+    var post = this.props.posts[this.props.loadingRequest.options.id][0];
 
     return (
       <div>

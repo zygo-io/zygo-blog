@@ -8,15 +8,15 @@ export default React.createClass({
   render: function() {
     if (!this.props.children)
       this.props.children = (
-        <div>
-          <Navbar selected="latest" />
           <ArticleList thumbs={this.props.thumbs} />
-        </div>
       );
 
     return (
-      <div className="page">
-        {this.props.children}
+      <div>
+        <Navbar selected="latest" />
+        <div className="page">
+          {this.props.children}
+        </div>
       </div>
     );
   }

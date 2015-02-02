@@ -7,7 +7,7 @@ export function handler(context) {
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === 4) {
         if (xmlhttp.status === 200)
-          return resolve(context.thumbs = xmlhttp.responseText);
+          return resolve(context.thumbs = JSON.parse(xmlhttp.responseText));
         return reject();
       }
     };

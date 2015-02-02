@@ -7,13 +7,15 @@ import ArticleList from './article-list.jsx!';
 export default React.createClass({
   render: function() {
     if (!this.props.children)
-      this.props.children = <ArticleList thumbs={this.props.thumbs} />;
+      this.props.children = (
+        <div>
+          <Navbar selected="latest" />
+          <ArticleList thumbs={this.props.thumbs} />
+        </div>
+      );
 
     return (
       <div className="page">
-        <Navbar />
-        <img className="banner" src="/assets/forest.jpg" />
-
         {this.props.children}
       </div>
     );

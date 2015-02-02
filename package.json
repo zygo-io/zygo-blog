@@ -5,12 +5,9 @@
       "baseURL": "public"
     },
     "dependencies": {
-      "bootstrap": "npm:bootstrap@^3.3.2",
       "css": "^0.1.0",
-      "http": "^1.7.0",
       "jsx": "^0.1.1",
       "react": "npm:react@^0.12.2",
-      "react-bootstrap": "npm:react-bootstrap@^0.13.2",
       "zygo": "github:Bubblyworld/zygo@master"
     }
   },

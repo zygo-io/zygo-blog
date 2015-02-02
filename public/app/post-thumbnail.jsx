@@ -9,7 +9,7 @@ export default React.createClass({
           <h3> {this.props.title} </h3>
           <p>
             {this.props.thumb}
-            <span className="read-next-button"> Continue </span>
+            <span className="read-next-button"> CONTINUE </span>
           </p>
         </a>
       </div>

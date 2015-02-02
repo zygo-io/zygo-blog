@@ -12,11 +12,13 @@ export default React.createClass({
       <div>
         <ArticleHeader
           author_img={post.author_img}
+          author={post.author}
           title={post.title}
-          subtitle={post.subtitle}/>
+          subtitle={post.subtitle}
+          back_img={post.back_img}/>
 
         <ArticleView post={post.post} />
-        <ReadNext />
+        <ReadNext thumb={post.thumb} id={post.id} title={post.title}/>
       </div>
     );
   }

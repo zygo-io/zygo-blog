@@ -1,12 +1,13 @@
 div.article-listing {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: white;
 }
 
 div.article-listing + div.article-listing {
   border-top: 1px solid lightgray;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 div.article-listing div#author-wrapper {

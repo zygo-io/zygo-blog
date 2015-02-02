@@ -5,7 +5,8 @@ System.config({
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
   },
-  "parser": "6to5"
+  "parser": "6to5",
+  "transpiler": "6to5"
 });
 
 System.config({

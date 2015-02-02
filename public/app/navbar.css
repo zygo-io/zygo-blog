@@ -1,63 +1,78 @@
 div.navbar-container {
-  position: fixed;
-  overflow: hidden;
   height: 30px;
   width: 100vw;
-  background-color: #F2F2F2;
-  border-bottom: 1px solid lightgray;
+  background-color: white;
 
-  padding: 0;
-  margin: 0;
-  z-index: 9999;
+  z-index: 1;
 }
 
 div.navbar {
-  display: flex;
+  border-bottom: 1px solid lightgray;
   align-items: center;
-
-  font-family: Raleway, serif;
+  justify-content: center;
+  display: flex;
 }
 
-/* fading images */
-div.navbar div.fade {
+/* fading logo */
+div.navbar div.logo {
   width: 25px;
   height: 25px;
-  padding: 0 10%;
+  padding: 0 10% 0 0;
 }
 
-div.navbar div.fade img {
+div.navbar div.logo div#overlay {
   position: absolute;
   width: 25px;
   height: 25px;
-
-  transition: opacity 2s;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.5s;
 }
 
-div.navbar div.fade img:hover {
-  opacity: 0;
-  transition: opacity 1s;
+div.navbar div.logo div#overlay:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.5s;
+}
+
+div.navbar div.logo img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
 }
 
 /* category links */
 div.navbar a {
+  position: relative;
   line-height: 30px;
-  padding: 0 1.5% 0 1.5%;
+  margin: 0 3% 0 0;
 
+  text-transform: uppercase;
   text-decoration: inherit;
   font-style: inherit;
-  color: inherit;
+  font-weight: 700;
+  font-size: 10px;
+  color: #7b7b7b;
+}
 
-  transition: background-color 0.5s, color 0.5s;
+/* selected */
+div.navbar a#selected {
+  color: black;
+}
+
+/* custom underline of selected link */
+div.navbar a#selected:before {
+  position: absolute;
+  bottom: -1px;
+  left: -2px;
+  height: 1px;
+  width: 100%;
+
+  content: "";
+  background-color: black;
+  border-left: 2px solid darkgray;
+  border-right: 2px solid darkgray;
 }
 
 /* hovers */
 div.navbar a:hover {
-  color: #DD3300;
-  background-color: #E8E8E8;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-/* line breaks between categories */
-div.navbar a + a {
-  border-left: 1px solid lightgray;
+  color: black;
 }

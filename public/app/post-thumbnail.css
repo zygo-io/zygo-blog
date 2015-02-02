@@ -7,10 +7,10 @@ div.post-thumbnail a {
 
 /* Title */
 div.post-thumbnail h3 {
+  padding: 0;
   margin: 5px 10px;
   transition: color 0.5s;
 
-  font-family: Raleway, serif;
   text-transform: uppercase;
 }
 
@@ -22,12 +22,15 @@ div.post-thumbnail h3::first-letter {
 div.post-thumbnail p {
   margin: 5px 10px;
   font-size: 14px;
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-weight: 300;
 }
 
 /* More button */
 span.read-next-button {
-  font-weight: bold;
+  color: gray;
+  font-weight: 700;
+  font-size: 12px;
+  border-bottom: 1px solid lightgray;
   transition: color 0.5s;
 }
 

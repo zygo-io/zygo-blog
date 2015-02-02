@@ -2,6 +2,7 @@ div.article-list {
   display: flex;
   flex-direction: column;
 
-  margin: 0;
-  padding: 0 15%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0;
 }

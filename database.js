@@ -86,7 +86,7 @@ function parsePost(buffer) {
 
   meta.date = new Date(meta.date);
   meta.post = marked(buffer);
-  meta.thumb = meta.post.substr(0, 100); //TODO
+  meta.thumb = "This is a temporary mock of the text blah blah lorem ipsum to be done..."; //TODO
   return meta;
 }
 

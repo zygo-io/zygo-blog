@@ -10,21 +10,18 @@ export default React.createClass({
 
     return (
       <div className="article-listing">
-        <div id="author-wrapper">
-          <AuthorThumbnail
-            author={thumb.author}
-            author_img={thumb.author_img}
-            date={thumb.date}
-            category={thumb.category}>
-          </AuthorThumbnail>
-        </div>
-
         <div id="post-wrapper">
           <PostThumbnail
             thumb={thumb.thumb}
             title={thumb.title}
-            id={thumb.id}>
-          </PostThumbnail>
+            id={thumb.id} />
+        </div>
+
+        <div id="author-wrapper">
+          <AuthorThumbnail
+            author={thumb.author}
+            author_img={thumb.author_img}
+            date={thumb.date} />
         </div>
       </div>
     );

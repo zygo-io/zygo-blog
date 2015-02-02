@@ -1,7 +1,8 @@
 #
 {
-  "author": "Lorem Markdownum",
-  "author_img": "/assets/logo-red.svg",
+  "author": "Lara Markdownum",
+  "author_img": "/assets/sample-portrait.png",
+  "back_img": "/assets/forest.jpg",
   "date": "14 Jan 2015 14:53",
   "category": "react",
   "title": "Lorem Markdown Takes the world by storm",

@@ -1,17 +1,18 @@
 /* container */
 div.read-next-container {
-  margin: 0;
-  padding: 0 15%;
+  margin: 0 auto;
+  padding: 10px;
   overflow: hidden;
+  max-width: 600px;
 
-  background-color: #F2F2F2;
   border-top: 1px solid lightgray;
 }
 
 /* read-next component */
 div.read-next {
+  margin: 0 auto;
   font-size: 14px;
-  font-family: Raleway;
+  font-weight: 700;
 }
 
 /* Read Next */

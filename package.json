@@ -5,10 +5,11 @@
       "baseURL": "public"
     },
     "dependencies": {
+      "jspm": "^11.3",
       "css": "^0.1.0",
       "jsx": "^0.1.1",
       "react": "npm:react@^0.12.2",
-      "zygo": "github:Bubblyworld/zygo@master"
+      "zygo": "github:zygo-io/zygo@master"
     }
   },
   "dependencies": {

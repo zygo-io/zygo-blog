@@ -9,7 +9,7 @@ cd zygo-example
 npm install -g nodemon jspm
 npm install
 jspm install
-./server.sh
+zygo --serve
 ```
 
 Then open up `http://localhost:8080` in the browser.

@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "marked": "^0.3.3",
-    "zygo-server": "^0.1.7"
+    "zygo-server": "^0.1"
   }
 }

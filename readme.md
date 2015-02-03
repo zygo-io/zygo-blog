@@ -11,3 +11,5 @@ npm install
 jspm install
 ./server.sh
 ```
+
+Then open up `http://localhost:8080` in the browser.

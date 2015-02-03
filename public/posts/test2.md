@@ -1,15 +1,13 @@
-#
-{
-  "author": "Lorem Markupum",
-  "author_img": "/assets/logo-black.svg",
-  "back_img": "/assets/tree.jpg",
-  "date": "11 Jan 2015 14:10",
-  "category": "ember",
-  "title": "Another story about lorem",
-  "subtitle": "Lorem the ipsum",
-  "id": "lorem2"
-}
-#
+---
+author: Lorem Markupum
+author_img: /assets/logo-black.svg
+back_img: /assets/tree.jpg
+date: 11 Jan 2015 14:10
+category: ember
+title: Another story about lorem
+subtitle: Lorem the ipsum
+id: lorem2
+---
 
 # Movet virgine horrendum corneus at Canens quisquis
 

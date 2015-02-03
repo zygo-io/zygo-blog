@@ -78,16 +78,31 @@ setInterval(function() {
 
 //Parse post from given buffer.
 function parsePost(buffer) {
+  //TODO: not so robust?
   //The metadata is contained in the first two # # tags.
-  var meta = buffer.match(/#[\s\S]*?#/)[0];
+  var meta = buffer.match(/---[\s\S]*?---/)[0];
   buffer = buffer.substr(meta.length);
-  meta = meta.substr(1, meta.length-2);
-  meta = JSON.parse(meta);
+  meta = meta.substr(3, meta.length-6);
+  meta = parseMeta(meta.trim());
 
   meta.date = new Date(meta.date);
   meta.post = marked(buffer);
   meta.thumb = "This is a temporary mock of the text blah blah lorem ipsum to be done..."; //TODO
   return meta;
+}
+
+//Parse meta-data in standard markdown form.
+//e.g. : https://raw.githubusercontent.com/6to5/6to5.github.io/master/docs/compare.md
+function parseMeta(meta) {
+  var result = {};
+
+  var lines = meta.split('\n');
+  lines.map(function(line) {
+    var keyval = line.split(':');
+    result[ keyval[0].trim() ] = keyval[1].trim();
+  });
+
+  return result;
 }
 
 //Add given post to db
@@ -126,4 +141,4 @@ module.exports = {
   middleware: middleware,
   getThumbs: getThumbs,
   getPosts: getPosts
-}
+};

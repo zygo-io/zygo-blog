@@ -1,15 +1,13 @@
-#
-{
-  "author": "Lara Markdownum",
-  "author_img": "/assets/sample-portrait.png",
-  "back_img": "/assets/sea.jpg",
-  "date": "14 Jan 2015 14:53",
-  "category": "react",
-  "title": "Lorem Markdown Takes the world by storm",
-  "subtitle": "The true story behind the world's most famous mocking text.",
-  "id": "lorem"
-}
-#
+---
+author: Lara Markdownum
+author_img: /assets/sample-portrait.png
+back_img: /assets/sea.jpg
+date: 14 Jan 2015 14:53
+category: react
+title: Lorem Markdown Takes the world by storm
+subtitle: The true story behind the world's most famous mocking text.
+id: lorem
+---
 
 # Fortibus loqui iterum fixit Haemoniam esset
 

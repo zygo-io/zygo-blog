@@ -7,3 +7,9 @@ body {
   background-color: #FFFFFF;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+/* fill in space taken up by navbar */
+div.navbarFill {
+  height: 30px;
+  width: 100%;
+}

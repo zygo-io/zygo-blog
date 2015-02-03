@@ -19,6 +19,7 @@ module.exports.handler = function(context) {
 
       res.on('end', function() {
         context.thumbs = JSON.parse(json);
+        context.meta.title = "Zygo Blog";
         resolve();
       });
     }).end();

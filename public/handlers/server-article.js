@@ -22,6 +22,7 @@ module.exports.handler = function(context) {
       res.on('end', function() {
         //TODO this is passed an array. This doesn't make a whole lot of sense. Fix this.
         context.posts[id] = JSON.parse(json);
+        context.meta.title = context.posts[id][0].title;
         resolve();
       });
     }).end();

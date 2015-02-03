@@ -1,15 +1,5 @@
 {
   "component": "app/page.jsx!",
-  "serverHandler" : "handlers/server-page",
-  "clientHandler" : "handlers/client-page",
-
-  "/post/:id": {
-    "component": "app/article.jsx!",
-    "serverHandler" : "handlers/server-article",
-    "clientHandler" : "handlers/client-article"
-  },
-
-  "/category/:id": {
-    "component": "app/article-list.jsx!"
-  }
+  "/post/:id": "app/article.jsx!",
+  "/category/:id": "app/article-list.jsx!"
 }

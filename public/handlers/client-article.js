@@ -10,9 +10,12 @@ export function handler(context) {
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === 4) {
         if (xmlhttp.status === 200)
-          return resolve(context.posts[id] = JSON.parse(xmlhttp.responseText));
-          return reject();
+          context.posts[id] = JSON.parse(xmlhttp.responseText);
+          context.meta.title = context.posts[id][0].title;
+          return resolve();
         }
+
+        return reject();
       };
 
       xmlhttp.open("GET", "/db/post/" + id, true);

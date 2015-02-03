@@ -5,6 +5,11 @@ import ArticleView from './article-view.jsx!';
 import ReadNext from './read-next.jsx!';
 
 export default React.createClass({
+  statics: {
+    clientHandler: 'handlers/client-article',
+    serverHandler: 'handlers/server-article'
+  },
+
   render: function() {
     var post = this.props.posts[this.props.loadingRequest.options.id][0];
 

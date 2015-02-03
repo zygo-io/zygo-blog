@@ -6,8 +6,12 @@ export function handler(context) {
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === 4) {
-        if (xmlhttp.status === 200)
-          return resolve(context.thumbs = JSON.parse(xmlhttp.responseText));
+        if (xmlhttp.status === 200) {
+          context.thumbs = JSON.parse(xmlhttp.responseText)
+          context.meta.title = "Zygo Blog";
+          return resolve();
+        }
+
         return reject();
       }
     };

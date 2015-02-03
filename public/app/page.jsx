@@ -5,17 +5,18 @@ import Navbar from './navbar.jsx!';
 import ArticleList from './article-list.jsx!';
 
 export default React.createClass({
-  render: function() {
-    if (!this.props.children)
-      this.props.children = (
-          <ArticleList thumbs={this.props.thumbs} />
-      );
+  statics: {
+    clientHandler: 'handlers/client-page',
+    serverHandler: 'handlers/server-page'
+  },
 
+  render: function() {
     return (
       <div>
-        <Navbar selected="latest" />
+        <Navbar selected={this.props.loadingRequest.options.id} />
+        <div className="navbarFill" />
         <div className="page">
-          {this.props.children}
+          {this.props.children || <ArticleList thumbs={this.props.thumbs} />}
         </div>
       </div>
     );

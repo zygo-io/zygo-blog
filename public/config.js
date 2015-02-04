@@ -12,7 +12,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.0",
     "jsx": "github:floatdrop/plugin-jsx@0.1.1",
     "react": "npm:react@0.12.2",
-    "zygo": "github:zygo-io/zygo@master",
+    "zygo": "github:zygo-io/zygo@0.1.0",
     "github:floatdrop/plugin-jsx@0.1.1": {
       "react-tools": "npm:react-tools@0.12.2"
     },
@@ -70,7 +70,7 @@ System.config({
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
-    "github:zygo-io/zygo@master": {
+    "github:zygo-io/zygo@0.1.0": {
       "chai": "npm:chai@1.10.0",
       "css": "github:systemjs/plugin-css@0.1.0",
       "jsx": "github:floatdrop/plugin-jsx@0.1.1",

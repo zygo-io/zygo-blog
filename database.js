@@ -25,25 +25,20 @@ var postsRegex = /\/db\/posts\/?/;
 var postRegex = /\/db\/post\/(.*)/;
 var thumbsRegex = /\/db\/thumbs\/?/;
 var thumbRegex = /\/db\/thumb\/(.*)/;
+var nextThumbRegex = /\/db\/next\/thumb\/(.*)/;
+var match;
 function middleware(req, res, next) {
-  if (req.url.match(postsRegex)) return respondWith(getPosts());
-  if (req.url.match(thumbsRegex)) return respondWith(getThumbs());
-  if (req.url.match(postRegex) || req.url.match(thumbRegex)) {
-    var match = req.url.match(postRegex) || req.url.match(thumbRegex);
-    var id = match[1];
-
-    return respondWith(
-      (req.url.match(postRegex) ? getPosts() : getThumbs())
-        .filter(function(obj) {
-          return obj.id === id;
-        })
-    );
-  }
+  //Get all thumb/posts.
+  if (match = req.url.match(postsRegex)) return respondWith(getPosts());
+  if (match = req.url.match(thumbsRegex)) return respondWith(getThumbs());
+  if (match = req.url.match(postRegex)) return respondWith(getPost(match[1]));
+  if (match = req.url.match(thumbRegex)) return respondWith(getThumb(match[1]));
+  if (match = req.url.match(nextThumbRegex)) return respondWith(getNextThumb(match[1]));
 
   //no matches, call next middleware.
   next();
 
-  //returns given values
+  //wrapper to return given value to client
   function respondWith(val) {
     res.write(JSON.stringify(val));
     res.end();
@@ -78,7 +73,6 @@ setInterval(function() {
 
 //Parse post from given buffer.
 function parsePost(buffer) {
-  //TODO: not so robust?
   //The metadata is contained in the first two # # tags.
   var meta = buffer.match(/---[\s\S]*?---/)[0];
   buffer = buffer.substr(meta.length);
@@ -125,10 +119,6 @@ function getThumbs(n) {
     .map(toThumb);
 }
 
-//Get the thumb of the next post in the given post's category
-//TODO: this, also, we should move the functions that get a post given an id into here
-// It doesn't make sense having them scattered arbitrarily elsewhere.
-
 //Convert a post to a thumb.
 function toThumb(post) {
   return {
@@ -142,8 +132,31 @@ function toThumb(post) {
   };
 }
 
+//Get post with given id, or undefined.
+function getPost(id) {
+  return getPosts()
+    .filter(function(post) { return post.id === id; })[0];
+}
+
+//Get thumb with given id.
+function getThumb(id) {
+  var post = getPost(id);
+  return post ? toThumb(post) : null;
+}
+
+//Get next thumb in same category as given id.
+function getNextThumb(id) {
+  var currentThumb = getThumb(id);
+  if (currentThumb) {
+    var thumbs = getThumbs()
+      .filter(function(thumb) { return thumb.category === currentThumb.category; });
+
+    var index = thumbs.indexOf(currentThumb);
+    if (index < 0) return null;
+    return thumbs[index+1];
+  } else return null;
+}
+
 module.exports = {
-  middleware: middleware,
-  getThumbs: getThumbs,
-  getPosts: getPosts
+  middleware: middleware
 };

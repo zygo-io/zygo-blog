@@ -11,7 +11,7 @@ export default React.createClass({
   },
 
   render: function() {
-    var post = this.props.posts[this.props.loadingRequest.options.id][0];
+    var post = this.props.posts[this.props.loadingRequest.options.id];
 
     return (
       <div>

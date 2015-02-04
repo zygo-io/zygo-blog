@@ -6,6 +6,7 @@ date: 11 Jan 2015 14:10
 category: react
 title: Another story about lorem
 subtitle: Lorem the ipsum
+thumb: Lorem markdownum ultima quatenus Venus et clangore, nefanda ait inque. Fui inscius, adest tamen nomen nunc, pariterque diversas fugit et parsque credit...
 id: lorem2
 ---
 

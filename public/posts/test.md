@@ -1,11 +1,12 @@
 ---
 author: Lara Markdownum
-author_img: /assets/sample-portrait.png
+author_img: /assets/sample-portrait.jpg
 back_img: /assets/sea.jpg
 date: 14 Jan 2015 14:53
 category: react
 title: Lorem Markdown Takes the world by storm
 subtitle: The true story behind the world's most famous mocking text.
+thumb: Lorem markdownum fundunt verum, enim, haut templi, o quia Graium formae potitur? Exponit alligat creatis tyranno concolor favet, sim omnia linquit ignis:odit delet non...
 id: lorem
 ---
 

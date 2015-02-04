@@ -151,10 +151,19 @@ function getNextThumb(id) {
     var thumbs = getThumbs()
       .filter(function(thumb) { return thumb.category === currentThumb.category; });
 
-    var index = thumbs.indexOf(currentThumb);
-    if (index < 0) return null;
+    var index = indexOf(thumbs, currentThumb.id);
+    if (index < 0 || !thumbs[index+1]) return null;
+
     return thumbs[index+1];
-  } else return null;
+  } else
+    return null;
+}
+
+//indexOf but matching on id.
+function indexOf(array, id) {
+  for (var i = 0; i < array.length; i++)
+    if (array[i].id === id) return i;
+  return -1;
 }
 
 module.exports = {

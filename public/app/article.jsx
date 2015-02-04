@@ -12,6 +12,8 @@ export default React.createClass({
 
   render: function() {
     var post = this.props.posts[this.props.loadingRequest.options.id];
+    var thumb = this.props.nextThumb;
+    var readNext = thumb ? <ReadNext thumb={thumb.thumb} id={thumb.id} title={thumb.title}/> : null;
 
     return (
       <div>
@@ -23,7 +25,7 @@ export default React.createClass({
           back_img={post.back_img}/>
 
         <ArticleView post={post.post} />
-        <ReadNext thumb={post.thumb} id={post.id} title={post.title}/>
+        {readNext}
       </div>
     );
   }

@@ -8,5 +8,11 @@ module.exports.handler = function(context) {
     .then(function(response) {
       context.posts[id] = JSON.parse(response);
       context.meta.title = context.posts[id].title;
+    })
+    .then(function() {
+      return request('/db/next/thumb/' + id);
+    })
+    .then(function(response) {
+      context.nextThumb = JSON.parse(response);
     });
 };

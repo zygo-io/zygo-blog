@@ -118,13 +118,18 @@ function getPosts(n) {
   n = n || db.length;
   return db.slice(0, n);
 }
-//Get the list of thumbs
 
+//Get the list of thumbs
 function getThumbs(n) {
   return getPosts(n)
     .map(toThumb);
 }
 
+//Get the thumb of the next post in the given post's category
+//TODO: this, also, we should move the functions that get a post given an id into here
+// It doesn't make sense having them scattered arbitrarily elsewhere.
+
+//Convert a post to a thumb.
 function toThumb(post) {
   return {
     id: post.id,

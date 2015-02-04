@@ -4,6 +4,5 @@
   "anchors": true,
   "env": "development",
   "routes": "public/routes.json",
-  "buildDir": "public/bundles",
-  "bundlesJSON": "public/bundles/bundles.json"
+  "buildDir": "public/bundles"
 }

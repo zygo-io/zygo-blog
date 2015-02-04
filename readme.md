@@ -5,7 +5,7 @@ A simple markdown-based "blogging platform" to show off the [zygo](https://githu
 ```sh
 git clone git@github.com:zygo-io/zygo-example.git
 cd zygo-example
-npm install -g jspm
+npm install -g jspm zygo-cli
 npm install
 jspm install
 ```

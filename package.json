@@ -6,7 +6,7 @@
       "lib": "public"
     },
     "map": {
-      "*": "app/*"
+      "*": "app/*.js"
     },
     "dependencies": {
       "css": "^0.1.0",

@@ -1,6 +1,4 @@
 ---
-author: Lara Markdownum
-author_img: /assets/sample-portrait.jpg
 back_img: /assets/sea.jpg
 date: 14 Jan 2015
 category: react

@@ -2,7 +2,7 @@ div.article-listing {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 600px;
+  width: 50vw;
 }
 
 div.article-listing + div.article-listing {

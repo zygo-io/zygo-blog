@@ -6,7 +6,7 @@ import PostThumbnail from './post-thumbnail.jsx!';
 
 export default React.createClass({
   render: function() {
-    let thumb = this.props.thumb;
+    var thumb = this.props.thumb;
 
     return (
       <div className="article-listing">

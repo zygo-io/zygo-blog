@@ -1,5 +1,6 @@
 //Mock database. Loads in the pages directory files, parses them and sets various
 // properties that need to be set.
+var highlight = require('highlight').Highlight;
 var marked = require('marked');
 var path = require('path');
 var fs = require('fs');
@@ -80,7 +81,7 @@ function parsePost(buffer) {
   meta = parseMeta(meta.trim());
 
   meta.date = new Date(meta.date);
-  meta.post = marked(buffer);
+  meta.post = highlight(marked(buffer), false, true);
   return meta;
 }
 

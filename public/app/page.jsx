@@ -1,4 +1,5 @@
 import "./page.css!";
+import "../assets/code-highlight.css!";
 import React from 'react';
 
 import Navbar from './navbar.jsx!';

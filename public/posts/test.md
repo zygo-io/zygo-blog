@@ -12,6 +12,15 @@ id: lorem
 
 ## Proxima Numam dictis cruentatus
 
+```javascript
+console.log("Some code here!");
+
+for (var i = 0; i < 10; i++)
+  Object.keys(something[i]).map(function(key) {
+    keysToTheKingdom(key);
+  });
+```
+
 Lorem markdownum fundunt verum, enim, haut templi, o quia Graium formae potitur?
 Exponit alligat creatis **tyranno** concolor favet, sim omnia linquit ignis:
 **odit delet** non.

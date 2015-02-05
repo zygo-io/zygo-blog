@@ -2,7 +2,7 @@
 author: Lara Markdownum
 author_img: /assets/sample-portrait.jpg
 back_img: /assets/sea.jpg
-date: 14 Jan 2015 14:53
+date: 14 Jan 2015
 category: react
 title: Lorem Markdown Takes the world by storm
 subtitle: The true story behind the world's most famous mocking text.

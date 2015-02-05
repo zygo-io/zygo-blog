@@ -1,4 +1,5 @@
 import React from 'react';
+import request from '../handlers/client-http';
 
 import ArticleHeader from './article-header.jsx!';
 import ArticleView from './article-view.jsx!';
@@ -28,5 +29,15 @@ export default React.createClass({
         {readNext}
       </div>
     );
+  },
+
+  //Guaranteed to only be called on the client, so we can use client-http fine.
+  componentDidMount: function() {
+    request(this.props.posts[this.props.loadingRequest.options.id].back_img)
+      .then(() => {
+        var overlay;
+        while(overlay = document.getElementById("loading"))
+        overlay.id = "";
+      });
   }
 });

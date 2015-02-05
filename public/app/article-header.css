@@ -9,6 +9,22 @@ div.article-header-container {
   color: white;
 
   overflow: hidden;
+  visibility: visible;
+}
+
+/*loading overlay */
+div.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 1s;
+}
+
+div.overlay#loading {
+  /* TODO: a spinner of sorts */
+  background-color: white;
 }
 
 /*background fixed image */
@@ -16,6 +32,16 @@ div.article-header-container > img {
   position: absolute;
   width: 100vw;
   z-index: -1;
+}
+
+/* container for the text */
+div.article-header {
+  padding: 0;
+  transition: padding 1s;
+}
+
+div.article-header#loading{
+  padding: 50px 0;
 }
 
 /* post title, subtitle, author */
@@ -47,7 +73,6 @@ div.article-header h4 {
   font-size: 18px;
   font-weight: 500;
   margin: 5px;
-  padding: 0;
 }
 
 /* post image */

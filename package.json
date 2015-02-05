@@ -2,7 +2,11 @@
   "jspm": {
     "name": "zygo-example",
     "directories": {
-      "baseURL": "public"
+      "baseURL": "public",
+      "lib": "public"
+    },
+    "map": {
+      "*": "app/*"
     },
     "dependencies": {
       "css": "^0.1.0",

@@ -16,7 +16,7 @@ export default React.createClass({
         <div className="navbar">
           <a href="/">
             <div className="logo">
-              <img src="/assets/logo-black.svg" />
+              <img src={this.props.logo} />
               <div id="overlay" />
             </div>
           </a>

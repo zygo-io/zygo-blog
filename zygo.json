@@ -4,5 +4,8 @@
   "anchors": true,
   "env": "development",
   "routes": "public/routes.json",
-  "buildDir": "public/bundles"
+  "buildDir": "public/bundles",
+  "defaultContext": {
+    "logo": "/assets/logo-black.svg"
+  }
 }

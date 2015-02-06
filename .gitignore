@@ -2,4 +2,5 @@ public/jspm_packages
 public/zygo
 public/config.js
 node_modules
+public/bundles
 .jshintrc

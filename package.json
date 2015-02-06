@@ -1,6 +1,6 @@
 {
   "jspm": {
-    "main": "public/routes",
+    "main": "routes",
     "name": "zygo-example",
     "directories": {
       "baseURL": "public",

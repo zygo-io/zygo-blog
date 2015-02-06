@@ -4,8 +4,9 @@ div.article-header-container {
   margin: 0;
   padding: 0;
 
-  height: 360px;
+  min-height: 360px;
   background-color: rgba(0, 0, 0, 0.2);
+  background-size: cover;
   color: white;
 
   overflow: hidden;
@@ -25,13 +26,6 @@ div.overlay {
 div.overlay#loading {
   /* TODO: a spinner of sorts */
   background-color: white;
-}
-
-/*background fixed image */
-div.article-header-container > img {
-  position: absolute;
-  width: 100vw;
-  z-index: -1;
 }
 
 /* container for the text */

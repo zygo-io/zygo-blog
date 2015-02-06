@@ -7,8 +7,8 @@ import ArticleList from './article-list.jsx!';
 
 export default React.createClass({
   statics: {
-    clientHandler: 'handlers/client-page',
-    serverHandler: 'handlers/server-page'
+    clientHandler: '../handlers/client-page',
+    serverHandler: '../handlers/server-page'
   },
 
   render: function() {

@@ -1,7 +1,7 @@
 {
   "jspm": {
-    "main": "routes",
     "name": "zygo-blog",
+    "main": "routes",
     "directories": {
       "baseURL": "public",
       "lib": "public"
@@ -11,6 +11,7 @@
     },
     "dependencies": {
       "css": "^0.1.0",
+      "http": "^1.7.0",
       "jsx": "^0.1.1",
       "react": "npm:react@^0.12.2",
       "zygo": "^0.2"

@@ -1,10 +1,11 @@
 {
   "post": 8080,
-  "middleware": "./database",
+  "middleware": "./testdb",
   "anchors": true,
   "env": "development",
   "routes": "public/routes.json",
   "buildDir": "public/bundles",
+  "postDir": "public/posts",
   "defaultContext": {
     "logo": "/assets/logo-black.svg",
     "menu": {

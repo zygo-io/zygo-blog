@@ -6,6 +6,10 @@
   "routes": "public/routes.json",
   "buildDir": "public/bundles",
   "defaultContext": {
-    "logo": "/assets/logo-black.svg"
+    "logo": "/assets/logo-black.svg",
+    "menu": {
+      "react": "/category/react",
+      "ember": "/category/ember"
+    }
   }
 }

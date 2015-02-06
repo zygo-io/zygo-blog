@@ -3,9 +3,11 @@ import React from "react";
 
 export default React.createClass({
   render: function() {
-    var links = ['ember', 'react'];
-    var anchors = links.map((link) => {
-      var href = '/category/' + link;
+    //We get the menu links from the default context.
+    var config = this.props.menu || {};
+
+    var anchors = Object.keys(config).map((link) => {
+      var href = config[link];
       if (link === this.props.selected)
         return (<a href={href} id="selected"> {link} </a>);
       return (<a href={href}> {link} </a>);
@@ -14,7 +16,7 @@ export default React.createClass({
     return (
       <div className="navbar-container">
         <div className="navbar">
-          <a href="/">
+          <a href="/post/index">
             <div className="logo">
               <img src={this.props.logo} />
               <div id="overlay" />

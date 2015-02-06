@@ -14,7 +14,8 @@ export default React.createClass({
           <PostThumbnail
             thumb={thumb.thumb}
             title={thumb.title}
-            id={thumb.id} />
+            pid={thumb.id}
+            cid={this.props.cid} />
         </div>
 
         <div id="author-wrapper">

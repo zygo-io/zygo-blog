@@ -1,5 +1,11 @@
 {
   "component": "app/page.jsx!",
-  "/post/:id": "app/article.jsx!",
-  "/category/:id": "app/article-list.jsx!"
+
+  "/post/:pid": "app/article.jsx!",
+
+  "/category/:cid": {
+    "component": "app/article-list.jsx!",
+    
+    "/post/:pid": "app/article.jsx!"
+  }
 }

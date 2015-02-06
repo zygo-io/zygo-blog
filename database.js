@@ -93,7 +93,7 @@ function parseMeta(meta) {
   var lines = meta.split('\n');
   lines.map(function(line) {
     var keyval = line.split(':');
-    result[ keyval[0].trim() ] = keyval[1].trim();
+    result[ keyval[0].trim() ] = keyval.slice(1).join(':').trim();
   });
 
   return result;
@@ -134,8 +134,9 @@ function toThumb(post) {
 
 //Get post with given id, or undefined.
 function getPost(id) {
-  return getPosts()
-    .filter(function(post) { return post.id === id; })[0];
+  var posts = getPosts()
+    .filter(function(post) { return post.id === id; });
+  return posts[0] || null;
 }
 
 //Get thumb with given id.

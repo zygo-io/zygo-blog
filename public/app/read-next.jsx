@@ -8,7 +8,10 @@ export default React.createClass({
       <div className="read-next-container">
         <div className="read-next">
           <h5> READ NEXT </h5>
-          <PostThumbnail id={this.props.id} title={this.props.title} thumb={this.props.thumb} />
+          <PostThumbnail pid={this.props.pid}
+                                   cid={this.props.cid}
+                                   title={this.props.title}
+                                   thumb={this.props.thumb} />
         </div>
       </div>
     );

@@ -14,7 +14,9 @@ export default React.createClass({
   render: function() {
     return (
       <div>
-        <Navbar selected={this.props.loadingRequest.options.id} logo={this.props.logo} />
+        <Navbar selected={this.props.loadingRequest.options.cid}
+                      logo={this.props.logo}
+                      menu={this.props.menu} />
         <div className="navbarFill" />
         <div className="page">
           {this.props.children || <ArticleList thumbs={this.props.thumbs} />}

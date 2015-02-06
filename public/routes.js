@@ -1,11 +1,11 @@
 export default {
-  "component": "app/page.jsx!",
+  "component": "zygo-blog/app/page.jsx!",
 
-  "/post/:pid": "app/article.jsx!",
+  "/post/:pid": "zygo-blog/app/article.jsx!",
 
   "/category/:cid": {
-    "component": "app/article-list.jsx!",
+    "component": "zygo-blog/app/article-list.jsx!",
 
-    "/post/:pid": "app/article.jsx!"
+    "/post/:pid": "zygo-blog/app/article.jsx!"
   }
 };

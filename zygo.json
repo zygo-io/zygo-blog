@@ -1,9 +1,9 @@
 {
+  "routes": "./routes",
   "post": 8080,
   "middleware": "./testdb",
   "anchors": true,
   "env": "development",
-  "routes": "public/routes.json",
   "buildDir": "public/bundles",
   "postDir": "public/posts",
   "defaultContext": {

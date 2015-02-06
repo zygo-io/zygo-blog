@@ -1,4 +1,6 @@
 {
+  "main": "public/routes.js",
+
   "jspm": {
     "name": "zygo-example",
     "directories": {
@@ -12,7 +14,7 @@
       "css": "^0.1.0",
       "jsx": "^0.1.1",
       "react": "npm:react@^0.12.2",
-      "zygo": "^0.1.0"
+      "zygo": "^0.1"
     }
   },
   "dependencies": {

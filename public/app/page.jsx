@@ -1,5 +1,5 @@
 import "./page.css!";
-import "../assets/code-highlight.css!";
+import "prism/themes/prism-dark.css!";
 import React from 'react';
 
 import Navbar from './navbar.jsx!';
@@ -14,7 +14,7 @@ export default React.createClass({
   render: function() {
     return (
       <div>
-        <Navbar selected={this.props.loadingRequest.options.cid}
+        <Navbar selected={this.props.loadRoute.cid}
                       logo={this.props.logo}
                       menu={this.props.menu} />
         <div className="navbarFill" />

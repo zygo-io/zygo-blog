@@ -23,7 +23,7 @@ export default React.createClass({
 
   //Get article header.
   getHeader: function() {
-    var post = this.props.posts[this.props.loadingRequest.options.pid];
+    var post = this.props.posts[this.props.loadRoute.pid];
 
     if (!post.title && !post.subtitle) return null;
     return <ArticleHeader author_img={post.author_img}
@@ -35,7 +35,7 @@ export default React.createClass({
 
   //Get article body.
   getBody: function() {
-    var post = this.props.posts[this.props.loadingRequest.options.pid];
+    var post = this.props.posts[this.props.loadRoute.pid];
 
     if (!post.post) return null;
     return <ArticleView post={post.post} />;
@@ -49,12 +49,12 @@ export default React.createClass({
     return <ReadNext thumb={thumb.thumb}
                                 title={thumb.title}
                                 pid={thumb.id}
-                                cid={this.props.loadingRequest.options.cid} />;
+                                cid={this.props.loadRoute.cid} />;
   },
 
   //Guaranteed to only be called on the client, so we can use client-http fine.
   componentDidMount: function() {
-    request(this.props.posts[this.props.loadingRequest.options.pid].back_img)
+    request(this.props.posts[this.props.loadRoute.pid].back_img)
       .then(() => {
         var overlay;
         while(overlay = document.getElementById("loading"))

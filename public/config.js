@@ -11,8 +11,13 @@ System.config({
 System.config({
   "map": {
     "css": "github:systemjs/plugin-css@0.1.0",
+    "fs": "github:jspm/nodelibs-fs@0.1.1",
+    "highlightjs": "github:components/highlightjs@8.4.0",
     "http": "github:jspm/nodelibs-http@1.7.0",
     "jsx": "github:floatdrop/plugin-jsx@0.1.1",
+    "marked": "npm:marked@0.3.3",
+    "path": "github:jspm/nodelibs-path@0.1.0",
+    "prism": "github:LeaVerou/prism@gh-pages",
     "react": "npm:react@0.12.2",
     "zygo": "github:zygo-io/zygo@0.1.0",
     "github:floatdrop/plugin-jsx@0.1.1": {
@@ -32,10 +37,6 @@ System.config({
     },
     "github:jspm/nodelibs-events@0.1.0": {
       "events-browserify": "npm:events-browserify@0.0.1"
-    },
-    "github:jspm/nodelibs-fs@0.1.0": {
-      "assert": "npm:assert@1.3.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0"
     },
     "github:jspm/nodelibs-http@1.7.0": {
       "Base64": "npm:Base64@0.2.1",
@@ -81,7 +82,7 @@ System.config({
       "url-pattern": "npm:url-pattern@0.6.0"
     },
     "npm:amdefine@0.1.0": {
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "module": "github:jspm/nodelibs-module@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
@@ -108,7 +109,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "inherits": "npm:inherits@2.0.1",
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
@@ -154,7 +155,7 @@ System.config({
       "commander": "npm:commander@2.5.1",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "glob": "npm:glob@4.2.2",
       "graceful-fs": "npm:graceful-fs@3.0.5",
       "iconv-lite": "npm:iconv-lite@0.4.6",
@@ -182,7 +183,7 @@ System.config({
     "npm:create-hash@1.1.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "inherits": "npm:inherits@2.0.1",
       "ripemd160": "npm:ripemd160@1.0.0",
       "sha.js": "npm:sha.js@2.3.6",
@@ -233,15 +234,15 @@ System.config({
       "through": "npm:through@2.3.6"
     },
     "npm:esprima-fb@10001.1.0-dev-harmony-fb": {
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:esprima-fb@7001.1.0-dev-harmony-fb": {
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:esprima-fb@8001.1001.0-dev-harmony-fb": {
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:events-browserify@0.0.1": {
@@ -250,7 +251,7 @@ System.config({
     "npm:glob@4.2.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "inflight": "npm:inflight@1.0.4",
       "inherits": "npm:inherits@2.0.1",
       "minimatch": "npm:minimatch@1.0.0",
@@ -287,7 +288,7 @@ System.config({
     },
     "npm:install@0.1.8": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
@@ -302,7 +303,7 @@ System.config({
       "base62": "npm:base62@0.1.1",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "esprima-fb": "npm:esprima-fb@8001.1001.0-dev-harmony-fb",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "source-map": "npm:source-map@0.1.31"
     },
@@ -317,7 +318,7 @@ System.config({
       "sigmund": "npm:sigmund@1.0.0"
     },
     "npm:mkdirp@0.5.0": {
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "minimist": "npm:minimist@0.0.8",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
@@ -325,7 +326,7 @@ System.config({
     "npm:mocha@1.21.5": {
       "css": "github:systemjs/plugin-css@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "tty": "github:jspm/nodelibs-tty@0.1.0"
@@ -396,7 +397,7 @@ System.config({
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "ast-types": "npm:ast-types@0.6.10",
       "esprima-fb": "npm:esprima-fb@10001.1.0-dev-harmony-fb",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "private": "npm:private@0.1.6",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "source-map": "npm:source-map@0.1.43"
@@ -407,7 +408,7 @@ System.config({
     },
     "npm:sha.js@2.3.6": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
@@ -417,13 +418,13 @@ System.config({
     },
     "npm:source-map@0.1.31": {
       "amdefine": "npm:amdefine@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:source-map@0.1.43": {
       "amdefine": "npm:amdefine@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.1",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },

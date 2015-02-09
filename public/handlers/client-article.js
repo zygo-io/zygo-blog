@@ -1,7 +1,7 @@
 import request from './client-http';
 
 export function handler(context) {
-  var id = context.loadingRequest.options.pid;
+  var id = context.loadRoute.pid;
   context.posts = context.posts || {};
 
   return Promise.resolve()

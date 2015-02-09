@@ -8,14 +8,14 @@ export default React.createClass({
     if (!this.props.children) {
       //If this is used as a route component, we filter thumbs
       // by their category, only showing those that match ours.
-      if (this.props.loadingRequest) {
+      if (this.props.loadRoute) {
           this.props.thumbs = this.props.thumbs.filter(
-            (thumb) => thumb.category === this.props.loadingRequest.options.cid
+            (thumb) => thumb.category === this.props.loadRoute.cid
           );
       }
 
       var listings = this.props.thumbs.map(
-        (thumb) => <ArticleListing thumb={thumb} cid={this.props.loadingRequest.options.cid} />
+        (thumb) => <ArticleListing thumb={thumb} cid={this.props.loadRoute.cid} />
       );
 
       return (

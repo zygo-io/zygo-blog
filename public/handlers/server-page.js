@@ -3,7 +3,7 @@ var request = require('./server-http');
 //Grab the thumbs data for the page.
 module.exports.handler = function(context) {
   //If we don't have children, move to index route.
-  if (context.loadingRequest.routes.length === 1)
+  if (context.loadRoute.routes.length === 1)
     return { redirect: '/post/index' };
 
   return request('/db/thumbs')

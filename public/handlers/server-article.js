@@ -1,7 +1,7 @@
 var request = require('./server-http');
 
 module.exports.handler = function(context) {
-  var id = context.loadingRequest.options.pid;
+  var id = context.loadRoute.pid;
   context.posts = context.posts || {};
 
   return request('/db/post/' + id)

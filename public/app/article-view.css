@@ -30,11 +30,6 @@ div.article blockquote {
   border: 1px solid #eeeeee;
 }
 
-/* code */
-div.article code {
-  word-wrap: break-word;
-}
-
 /* links */
 div.article a {
   font-style: inherit;

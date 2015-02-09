@@ -1,9 +1,19 @@
 //Mock database. Loads in the pages directory files, parses them and sets various
 // properties that need to be set.
-var highlight = require('highlight').Highlight;
 var marked = require('marked');
 var path = require('path');
 var fs = require('fs');
+var prism = require('prism');
+
+marked.setOptions({
+  highlight: function(code, lang) {
+    try {
+      return prism.highlight(code, prism.languages[lang], lang);
+    } catch(err) {
+      console.log("Error syntax highlighting: " + err);
+    }
+  }
+});
 
 //Given a directory to read posts from, returns a middleware function.
 module.exports = function(postDir) {
@@ -21,6 +31,7 @@ module.exports = function(postDir) {
     id: String
   }
   */
+  var isPopulated = false;
   var db = [];
 
   //Middleware function to host this as a rest api
@@ -31,16 +42,16 @@ module.exports = function(postDir) {
   var nextThumbRegex = /\/db\/next\/thumb\/(.*)/;
   var match;
 
-  //Populate db every couple of minutes.
-  populate(function() {});
-  setInterval(function() {
-    populate(function(error) {
-      if (error) return console.log("Error populating database.");
-      console.log("Database repopulated.");
-    });
-  }, 600000);
+  return function middleware(req, res, next, zygo) {
+    //Populate database if not cached.
+    if (!isPopulated)
+      populate(path.resolve(zygo.baseURL, postDir), function(error) {
+        if (error) return console.log("Error populating database.");
+        console.log("Database repopulated.");
 
-  return function middleware(req, res, next) {
+        isPopulated = true;
+      });
+
     //Get all thumb/posts.
     if (match = req.url.match(postsRegex)) return respondWith(getPosts());
     if (match = req.url.match(thumbsRegex)) return respondWith(getThumbs());
@@ -56,11 +67,11 @@ module.exports = function(postDir) {
       res.write(JSON.stringify(val));
       res.end();
     }
-  }
+  };
 
 
   //Repopulate database
-  function populate(callback) {
+  function populate(postDir, callback) {
     fs.readdir(postDir, function(error, files) {
       if (error) return callback(error);
 
@@ -85,7 +96,7 @@ module.exports = function(postDir) {
     meta = parseMeta(meta.trim());
 
     meta.date = new Date(meta.date);
-    meta.post = highlight(marked(buffer), false, true);
+    meta.post = marked(buffer);
     return meta;
   }
 

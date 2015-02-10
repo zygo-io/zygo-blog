@@ -15,28 +15,26 @@ div.navbar {
 }
 
 /* fading logo */
-div.navbar div.logo {
-  width: 25px;
-  height: 25px;
+div.navbar-container div.logo {
+  position: absolute;
+  width: auto;
+  height: 20px;
+  padding: 5px;
 }
 
-div.navbar div.logo div#overlay {
-  position: absolute;
-  width: 25px;
-  height: 25px;
+div.navbar-container div.logo div#overlay {
+  height: 20px;
   background-color: rgba(0,0,0,0);
   transition: background-color 0.5s;
 }
 
-div.navbar div.logo div#overlay:hover {
+div.navbar-container div.logo div#overlay:hover {
   background-color: rgba(255, 255, 255, 0.5);
   transition: background-color 0.5s;
 }
 
-div.navbar div.logo img {
-  position: absolute;
-  width: 25px;
-  height: 25px;
+div.navbar-container div.logo img {
+  height: 20px;
 }
 
 /* category links */

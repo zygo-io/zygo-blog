@@ -30,6 +30,23 @@ div.article blockquote {
   border: 1px solid #eeeeee;
 }
 
+div.article pre {
+  display: block;
+}
+
+div.article code {
+  font-size: 80%;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+div.article pre > code {
+  display: block;
+  margin: 0 10%;
+  padding: 16px;
+  word-wrap: break-word;
+}
+
 /* links */
 div.article a {
   font-style: inherit;

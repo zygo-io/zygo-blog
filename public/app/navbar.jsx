@@ -15,14 +15,14 @@ export default React.createClass({
 
     return (
       <div className="navbar-container">
-        <div className="navbar">
-          <a href="/post/index">
-            <div className="logo">
-              <img src={this.props.logo} />
-              <div id="overlay" />
-            </div>
-          </a>
+        <a href="/post/index">
+          <div className="logo">
+            <img src={this.props.logo} />
+            <div id="overlay" />
+          </div>
+        </a>
 
+        <div className="navbar">
           {anchors}
         </div>
       </div>

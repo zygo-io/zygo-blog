@@ -13,3 +13,9 @@ div.navbarFill {
   height: 30px;
   width: 100%;
 }
+
+@media screen and (max-width: 300px) {
+  div.navBarFill {
+    height: 60px;
+  }
+}

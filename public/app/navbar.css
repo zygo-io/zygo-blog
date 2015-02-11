@@ -7,6 +7,12 @@ div.navbar-container {
   z-index: 999;
 }
 
+@media screen and (max-width: 300px) {
+  div.navbar-container {
+    height: 60px;
+  }
+}
+
 div.navbar {
   border-bottom: 1px solid lightgray;
   align-items: center;
@@ -20,6 +26,12 @@ div.navbar-container div.logo {
   width: auto;
   height: 20px;
   padding: 5px;
+}
+
+@media screen and (max-width: 300px) {
+  div.navbar-container div.logo {
+    position: relative;
+  }
 }
 
 div.navbar-container div.logo div#overlay {

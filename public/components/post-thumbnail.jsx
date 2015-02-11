@@ -5,7 +5,7 @@ export default React.createClass({
   render: function() {
     return (
       <div className="post-thumbnail">
-        <a href={'/category/' + this.props.cid + '/post/' + this.props.pid}>
+        <a href={this.props.url}>
           <h3> {this.props.title} </h3>
           <p>
             {this.props.thumb}

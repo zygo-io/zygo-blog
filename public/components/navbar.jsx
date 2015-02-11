@@ -15,7 +15,7 @@ export default React.createClass({
 
     return (
       <div className="navbar-container">
-        <a href="/post/index">
+        <a href={this.props.home}>
           <div className="logo">
             <img src={this.props.logo} />
             <div id="overlay" />

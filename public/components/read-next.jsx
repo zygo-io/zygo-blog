@@ -1,4 +1,4 @@
-import "./read-next.css!";
+import './read-next.css!';
 import React from 'react';
 import PostThumbnail from './post-thumbnail.jsx!';
 
@@ -11,7 +11,8 @@ export default React.createClass({
           <PostThumbnail pid={this.props.pid}
                                    cid={this.props.cid}
                                    title={this.props.title}
-                                   thumb={this.props.thumb} />
+                                   thumb={this.props.thumb}
+                                   url={this.props.url} />
         </div>
       </div>
     );

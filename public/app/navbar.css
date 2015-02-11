@@ -7,7 +7,7 @@ div.navbar-container {
   z-index: 999;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
   div.navbar-container {
     height: 60px;
   }
@@ -28,7 +28,7 @@ div.navbar-container div.logo {
   padding: 5px;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
   div.navbar-container div.logo {
     position: relative;
   }

@@ -1,4 +1,4 @@
-import './article-view.css!';
+import './article.css!';
 import React from 'react';
 
 export default React.createClass({

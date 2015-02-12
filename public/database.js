@@ -143,7 +143,8 @@ module.exports = function(postDir) {
       author: post.author,
       author_img: post.author_img,
       date: post.date.toDateString(),
-      category: post.category
+      category: post.category,
+      url: '/' + (post.category ? post.category + '/' : '') + post.id
     };
   }
 

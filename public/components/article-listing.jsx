@@ -11,13 +11,13 @@ export default React.createClass({
     return (
       <div className="article-listing">
         <div id="post-wrapper">
-          <PostThumbnail {..thumb} />
+          <PostThumbnail {...thumb} />
         </div>
 
         <div id="author-wrapper">
-          <AuthorThumbnail {..thumb} />
+          <AuthorThumbnail {...thumb} />
         </div>
       </div>
     );
   }
-})
+});

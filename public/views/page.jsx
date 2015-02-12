@@ -4,10 +4,6 @@ import React from 'react';
 import Navbar from '../components/navbar.jsx!';
 
 export default React.createClass({
-  statics: {
-    clientHandler: function(context) { context.db_host = '' },
-    serverHandler: function(context, config) { context.db_host = 'http://localhost:8080' }
-  },
   render: function() {
     return (
       <div>

@@ -14,7 +14,7 @@ export default React.createClass({
 
     return (
       <div className="article-list">
-        {listings.map((thumb) => <ArticleListing key={thumb.id} thumb={thumb})}
+        {listings.map((thumb) => <ArticleListing key={thumb.id} thumb={thumb} />)}
       </div>
     );
   }

@@ -17,9 +17,9 @@ export default React.createClass({
 
     return (
       <div>
-        {(post.title || post.subtitle) && <ArticleHeader {..post} />}
+        {(post.title || post.subtitle) && <ArticleHeader {...post} />}
         <Article post={post.post} />
-        <ReadNext {..this.props.nextArticle} />
+        <ReadNext {...this.props.nextArticle} />
       </div>
     );
   },
@@ -27,7 +27,7 @@ export default React.createClass({
   //Guaranteed to only be called on the client, so we can use client-http fine.
   // TODO use image plugin here
   componentDidMount: function() {
-    /* 
+    /*
     request(this.props.posts[this.props.loadRoute.pid].back_img)
       .then(() => {
         var overlay;

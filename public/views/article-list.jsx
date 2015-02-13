@@ -14,8 +14,15 @@ export default React.createClass({
      *
      */
     handler: function(context) {
+      // only load listing data if we dont have it
+      if (context.thumbs)
+        return;
+
       return request(context.db_host + '/db/thumbs')
       .then(function(listing) {
+        if (!context.loadRoute)
+          return;
+
         context.thumbs = listing;
 
         // if the category isn't used at all, then cancel this route

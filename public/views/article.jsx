@@ -14,25 +14,17 @@ export default React.createClass({
      * Article handler
      * From curRoute.pid route context, populates context data:
      *  - posts[pid]
-     *  - readNext
      */
     handler: function(context) {
       var id = context.loadRoute.pid;
       context.posts = context.posts || {};
 
-      return Promise.all([
-        request(context.db_host + '/db/post/' + id),
-        request(context.db_host + '/db/next/thumb/' + id)
-      ])
-      .then(function(responses) {
-        if (!responses[0])
-          return false;
-
-        context.posts[id] = responses[0];
-        context.nextArticle = responses[1];
+      return (context.posts[id] ? Promise.resolve(context.posts[id]) : request(context.db_host + '/db/post/' + id))
+      .then(function(post) {
+        context.posts[id] = post;
 
         // set the page title
-        context.pageTitle = context.posts[id].title;
+        context.pageTitle = post.title;
       });
     }
   },
@@ -45,7 +37,7 @@ export default React.createClass({
       <div>
         {(post.title || post.subtitle) && <ArticleHeader {...post} />}
         <Article post={post.post} />
-        { this.props.nextArticle ? <ReadNext {...this.props.nextArticle} /> : null }
+        { post.nextThumb ? <ReadNext {...post.nextThumb} /> : null }
       </div>
     );
   },

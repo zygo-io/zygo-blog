@@ -35,11 +35,8 @@ var isPopulated = false;
 var db = [];
 
 //Middleware function to host this as a rest api
-var postsRegex = /\/db\/posts\/?/;
 var postRegex = /\/db\/post\/(.*)/;
 var thumbsRegex = /\/db\/thumbs\/?/;
-var thumbRegex = /\/db\/thumb\/(.*)/;
-var nextThumbRegex = /\/db\/next\/thumb\/(.*)/;
 var match;
 
 //Given a directory to read posts from, returns a middleware function.
@@ -54,11 +51,8 @@ export function middleware(req, res, next, config) {
     });
 
   //Get all thumb/posts.
-  if (match = req.url.match(postsRegex)) return respondWith(getPosts());
   if (match = req.url.match(thumbsRegex)) return respondWith(getThumbs());
   if (match = req.url.match(postRegex)) return respondWith(getPost(match[1]));
-  if (match = req.url.match(thumbRegex)) return respondWith(getThumb(match[1]));
-  if (match = req.url.match(nextThumbRegex)) return respondWith(getNextThumb(match[1]));
 
   //no matches, call next middleware.
   next();
@@ -147,14 +141,17 @@ function toThumb(post) {
 }
 
 //Get post with given id, or undefined.
-function getPost(id) {
+function getPost(id, fromThumb) {
   var posts = getPosts().filter((post) => post.id === id );
+  var post = posts[0] || null;
+  if (post && !fromThumb)
+    post.nextThumb = getNextThumb(id);
   return posts[0] || null;
 }
 
 //Get thumb with given id.
 function getThumb(id) {
-  var post = getPost(id);
+  var post = getPost(id, true);
   return post ? toThumb(post) : null;
 }
 

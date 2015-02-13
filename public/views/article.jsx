@@ -32,7 +32,7 @@ export default React.createClass({
         context.nextArticle = responses[1];
 
         // set the page title
-        context.meta.title = context.posts[id].title;
+        context.pageTitle = context.posts[id].title;
       });
     }
   },
@@ -45,7 +45,7 @@ export default React.createClass({
       <div>
         {(post.title || post.subtitle) && <ArticleHeader {...post} />}
         <Article post={post.post} />
-        <ReadNext {...this.props.nextArticle} />
+        { this.props.nextArticle ? <ReadNext {...this.props.nextArticle} /> : null }
       </div>
     );
   },

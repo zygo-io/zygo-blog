@@ -1,5 +1,5 @@
 {
-  "component": "./components/page.jsx!",
+  "component": "./views/page.jsx!",
   "/:pid": "./views/article.jsx!",
   "/:cid": {
     "/": "./views/article-list.jsx!",

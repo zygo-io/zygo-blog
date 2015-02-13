@@ -20,8 +20,11 @@ export default React.createClass({
 
         // if the category isn't used at all, then cancel this route
         var cid = context.loadRoute.cid;
-        if (cid && !listing.some((item) => item.category == cid))
+
+        if (!cid || !listing.some((item) => item.category == cid))
           return false;
+
+        context.pageTitle = cid.charAt(0).toUpperCase() + cid.substr(1);
       });
     }
   },

@@ -8,7 +8,9 @@ import prism from 'prism';
 marked.setOptions({
   highlight(code, lang) {
     try {
-      return prism.highlight(code, prism.languages[lang], lang);
+      if (prism.languages[lang])
+        return prism.highlight(code, prism.languages[lang], lang);
+      return lang;
     } catch(err) {
       console.log("Error syntax highlighting: " + err);
     }
@@ -133,12 +135,12 @@ function getThumbs(n) {
 //Convert a post to a thumb.
 function toThumb(post) {
   return {
-    id: post.id, 
-    thumb: post.thumb, 
-    title: post.title, 
-    author: post.author, 
+    id: post.id,
+    thumb: post.thumb,
+    title: post.title,
+    author: post.author,
     category: post.category,
-    author_img: post.author_img, 
+    author_img: post.author_img,
     date: post.date.toDateString(),
     url: '/' + (post.category ? post.category + '/' : '') + post.id
   };

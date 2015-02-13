@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {request} from '../data-request';
+
 import 'prism/themes/prism-dark.css!';
 
 import ArticleHeader from '../components/article-header.jsx!';
@@ -8,7 +10,28 @@ import ReadNext from '../components/read-next.jsx!';
 
 export default React.createClass({
   statics: {
-    handler: '../handlers/article'
+    /*
+     * Article handler
+     * From curRoute.pid route context, populates context data:
+     *  - posts[pid]
+     *  - readNext
+     */
+    handler: function(context) {
+      var id = context.loadRoute.pid;
+      context.posts = context.posts || {};
+
+      return Promise.all([
+        request(context.db_host + '/db/post/' + id),
+        request(context.db_host + '/db/next/thumb/' + id)
+      ])
+      .then(function(responses) {
+        context.posts[id] = responses[0];
+        context.nextArticle = responses[1];
+
+        // set the page title
+        context.meta.title = context.posts[id].title;
+      });
+    }
   },
 
   render: function() {

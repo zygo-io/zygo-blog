@@ -1,11 +1,24 @@
 import './article-list.css!';
 import React from 'react';
+import {request} from '../data-request';
 
 import ArticleListing from '../components/article-listing.jsx!';
 
 export default React.createClass({
   statics: {
-    handler: '../handlers/article-list'
+    /*
+     * Article List handler
+     *
+     * Gets teaser-style list of all articles
+     * Stored at context.thumbs
+     *
+     */
+    handler: function(context) {
+      return request(context.db_host + '/db/thumbs')
+      .then(function(listing) {
+        context.thumbs = listing;
+      });
+    }
   },
   render: function() {
     var cid = this.props.curRoute.cid;

@@ -1,13 +1,8 @@
 {
   "component": "./components/page.jsx!",
-
-  "/post/:pid": "./components/article.jsx!",
-
-  "/category/:cid": {
-    "component": "./components/article-list.jsx!",
-
-    "/post/:pid": {
-      "component": "./components/article.jsx!"
-    }
+  "/:pid": "./views/article.jsx!",
+  "/:cid": {
+    "/": "./views/article-list.jsx!",
+    "/:pid": "./views/article.jsx!"
   }
 }

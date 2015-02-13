@@ -47,16 +47,13 @@ export default React.createClass({
     );
   },
 
-  //Guaranteed to only be called on the client, so we can use client-http fine.
-  // TODO use image plugin here
+  //Guaranteed to only be called on the client, so we can use global Systemjs object.
   componentDidMount: function() {
-    /*
-    request(this.props.posts[this.props.loadRoute.pid].back_img)
+    System.import(this.props.posts[this.props.curRoute.pid].back_img.substr(1) + '!image')
       .then(() => {
         var overlay;
         while(overlay = document.getElementById("loading"))
         overlay.id = "";
       });
-    */
   }
 });

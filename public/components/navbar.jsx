@@ -9,8 +9,8 @@ export default React.createClass({
     var anchors = Object.keys(config).map((link) => {
       var href = config[link];
       if (link === this.props.selected)
-        return (<a href={href} id="selected"> {link} </a>);
-      return (<a href={href}> {link} </a>);
+        return (<a href={href} key={href} id="selected"> {link} </a>);
+      return (<a href={href} key={href}> {link} </a>);
     });
 
     return (

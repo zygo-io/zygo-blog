@@ -17,6 +17,11 @@ export default React.createClass({
       return request(context.db_host + '/db/thumbs')
       .then(function(listing) {
         context.thumbs = listing;
+
+        // if the category isn't used at all, then cancel this route
+        var cid = context.loadRoute.cid;
+        if (cid && !listing.some((item) => item.category == cid))
+          return false;
       });
     }
   },

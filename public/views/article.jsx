@@ -25,6 +25,9 @@ export default React.createClass({
         request(context.db_host + '/db/next/thumb/' + id)
       ])
       .then(function(responses) {
+        if (!responses[0])
+          return false;
+
         context.posts[id] = responses[0];
         context.nextArticle = responses[1];
 
@@ -49,7 +52,9 @@ export default React.createClass({
 
   //Guaranteed to only be called on the client, so we can use global Systemjs object.
   componentDidMount: function() {
-    System.import(this.props.posts[this.props.curRoute.pid].back_img.substr(1) + '!image')
+    var headerImg = this.props.posts[this.props.curRoute.pid].back_img;
+    if (headerImg)
+      System.import(headerImg.substr(1) + '!image')
       .then(() => {
         var overlay;
         while(overlay = document.getElementById("loading"))

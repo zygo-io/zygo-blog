@@ -4,7 +4,7 @@ import React from 'react';
 export default React.createClass({
   render: function() {
     return (
-      <div className="article-header-container" style={{backgroundImage: 'url('+this.props.back_img+')'}} >
+      <div className="article-header-container" style={{backgroundImage: this.props.back_img ? 'url('+this.props.back_img+')' : ''}} >
         <div className="overlay" id="loading" />
 
         <div className="article-header" id="loading">

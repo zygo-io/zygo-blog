@@ -2,8 +2,8 @@
   "jspm": {
     "main": "routes",
     "directories": {
-      "lib": "public",
-      "baseURL": "public"
+      "baseURL": "public",
+      "lib": "public"
     },
     "dependencies": {
       "css": "^0.1.3",

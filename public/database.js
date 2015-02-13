@@ -41,10 +41,10 @@ var nextThumbRegex = /\/db\/next\/thumb\/(.*)/;
 var match;
 
 //Given a directory to read posts from, returns a middleware function.
-export function middleware(req, res, next, zygo) {
+export function middleware(req, res, next, config) {
   //Populate database if not cached.
   if (!isPopulated)
-    populate(path.resolve(zygo.config.postsDir), function(error) {
+    populate(path.resolve(config.postsDir), function(error) {
       if (error) return console.log("Error populating database.");
       console.log("Database repopulated.");
 
